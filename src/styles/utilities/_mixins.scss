@@ -1,0 +1,43 @@
+@use 'variables';
+@use 'sass:color';
+
+@mixin flex-center($direction: row, $align: center, $justify: center, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin button-style($bg, $color) {
+  background: $bg;
+  color: $color;
+  font-family: variables.$oswald-font;
+  border: none;
+  border-radius: 2em;
+  padding: 0.7em 2.5em;
+  font-size: 1rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@mixin link-underline {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: variables.$light-bg;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 100%;
+  }
+}

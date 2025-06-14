@@ -1,0 +1,54 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+.section {
+  @include mixins.flex-center(column, center, center);
+
+  background: #fff;
+  padding: 3.6rem 0 5rem;
+
+  &__headline {
+    font-family: variables.$heading-font;
+    color: variables.$sec2-title-color;
+    font-size: 5rem;
+    text-align: center;
+    margin: 2.5rem 0 4rem;
+  }
+
+  &__subheadline {
+    font-family: variables.$subheading-font;
+    color: variables.$sec2-subtitle-color;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  &__article {
+    @include mixins.flex-center(row, flex-start, center, 5rem);
+
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+    padding: 0 5%;
+
+    &--column {
+      font-family: variables.$body-font;
+      font-size: 1rem;
+      color: variables.$sec2-title-color;
+      line-height: 1.7;
+      max-width: 420px;
+    }
+  }
+
+  &__button {
+    @include mixins.button-style(variables.$accent-brown, #fff);
+
+    margin: 1rem auto 2.5rem;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: top left;
+
+    &:hover {
+      transform: rotate(15deg);
+    }
+  }
+}

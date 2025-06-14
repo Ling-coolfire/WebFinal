@@ -1,0 +1,55 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+.learn_more {
+  @include mixins.flex-center(row, center, center);
+
+  background: url('../assets/footer_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 70%;
+  height: 80vh;
+
+  &__section {
+    width: 40%;
+    height: 100%;
+
+    @include mixins.flex-center(column, center, space-around);
+
+    h2 {
+      font-family: variables.$heading-font;
+      font-size: 4rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    &--button {
+      @include mixins.flex-center(row, center, center);
+
+      width: 150px;
+      height: 150px;
+      background: variables.$light-bg;
+      border: none;
+      border-radius: 50%;
+      font-size: 4.4rem;
+      color: variables.$accent-brown;
+      padding: 0 0 0.6rem 0.8rem;
+      transition: 0.4s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+        background-color: variables.$accent-brown;
+        color: variables.$light-bg;
+      }
+    }
+
+    h3 {
+      font-family: variables.$body-font;
+      font-size: 1.5rem;
+      color: #fff;
+      text-align: center;
+      font-weight: 400;
+      margin-bottom: -3rem;
+    }
+  }
+}

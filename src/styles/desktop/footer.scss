@@ -1,0 +1,64 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+footer {
+  width: 100%;
+  background: variables.$footer-brown;
+
+  .footer__section {
+    @include mixins.flex-center(row, center, space-around);
+
+    &--1 {
+      padding: 2rem 0 1rem;
+
+      @include mixins.flex-center(row, center, center);
+
+      &--logo {
+        @include mixins.flex-center(column, center, center);
+
+        margin-right: 1rem;
+
+        img {
+          width: 8.5rem;
+        }
+
+        h3 {
+          font-family: variables.$body-font;
+          font-size: 1.1rem;
+          color: variables.$grey-font;
+          letter-spacing: 0.3rem;
+        }
+      }
+
+      &--contact {
+        font-family: variables.$body-font;
+        font-size: 1rem;
+        color: variables.$grey-font;
+        font-weight: bold;
+        margin-top: 3rem;
+
+        a {
+          margin-top: 5rem;
+          color: variables.$grey-font;
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            color: variables.$grey-font;
+          }
+        }
+      }
+    }
+
+    &--2 {
+      margin-top: 6.3rem;
+
+      h4 {
+        font-family: variables.$body-font;
+        font-size: 1rem;
+        color: variables.$grey-font;
+        font-weight: 500;
+      }
+    }
+  }
+}

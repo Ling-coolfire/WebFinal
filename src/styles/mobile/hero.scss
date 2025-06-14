@@ -1,0 +1,67 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+.hero {
+  background: url('../assets/hero_bg_mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh - 6rem);
+  width: 100vw;
+
+  &__container {
+    @include mixins.flex-center(column, center, space-around);
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &--logo {
+      width: 33%;
+      position: relative;
+      margin-bottom: -5rem;
+      animation: rotate 2s linear infinite;
+      transition: transform 1s ease-in-out;
+
+      @keyframes rotate {
+        0% {
+          transform: scale(1) rotateY(0deg);
+        }
+
+        25% {
+          transform: scale(1.1) rotateY(90deg);
+        }
+
+        50% {
+          transform: scale(1.15) rotateY(180deg);
+        }
+
+        75% {
+          transform: scale(1.1) rotateY(270deg);
+        }
+
+        100% {
+          transform: scale(1) rotateY(360deg);
+        }
+      }
+    }
+
+    &--title {
+      font-family: variables.$heading-font;
+      font-size: 5.7rem;
+      color: variables.$main-brown;
+      margin: 3rem 0;
+      word-spacing: 100vw;
+      margin-top: -4rem;
+      text-align: center;
+      line-height: 0.9;
+    }
+
+    &--subtitle {
+      color: variables.$main-brown;
+      padding: 0 5rem;
+      font-size: 1.5rem;
+      text-align: center;
+      font-family: variables.$body-font;
+    }
+  }
+}

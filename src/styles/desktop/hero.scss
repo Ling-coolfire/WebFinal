@@ -1,0 +1,76 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+.hero {
+  @include mixins.flex-center(column, center, center);
+
+  background: url('../assets/hero_bg.png');
+  background-size: cover;
+  background-position: 30% 20%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 70vh;
+  width: 100%;
+
+  &__container {
+    @include mixins.flex-center(column, flex-start);
+
+    // height: 100%;height
+    width: 40%;
+    margin: 0 40% 15% 15%;
+
+    &--logo {
+      position: relative;
+      align-self: flex-start;
+      display: flex;
+      align-items: start;
+      height: 15rem;
+      animation: rotate 2s linear infinite;
+      transition: transform 1s ease-in-out;
+
+      @keyframes rotate {
+        0% {
+          transform: scale(1) rotateY(0deg);
+        }
+
+        25% {
+          transform: scale(1.1) rotateY(90deg);
+        }
+
+        50% {
+          transform: scale(1.15) rotateY(180deg);
+        }
+
+        75% {
+          transform: scale(1.1) rotateY(270deg);
+        }
+
+        100% {
+          transform: scale(1) rotateY(360deg);
+        }
+      }
+    }
+
+    &--title {
+      font-family: variables.$heading-font;
+      font-size: 6rem;
+      color: #61412e;
+      text-align: end;
+      width: 80%;
+      line-height: 0.9;
+      word-spacing: 100vw;
+      margin-right: 0;
+    }
+
+    &--subtitle {
+      font-family: variables.$body-font;
+      font-size: 1.5rem;
+      color: #464547;
+      letter-spacing: 0.75%;
+      word-spacing: 0.5%;
+      width: 80%;
+      margin-top: 4rem;
+      margin-right: 0;
+    }
+  }
+}

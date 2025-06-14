@@ -1,0 +1,47 @@
+@use '../utilities/variables';
+@use '../utilities/mixins';
+
+.section {
+  width: 100vw;
+  height: 100vh;
+
+  @include mixins.flex-center(column, center, space-evenly);
+
+  &__headline {
+    font-family: variables.$heading-font;
+    color: variables.$sec2-title-color;
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 0 2.5rem;
+  }
+
+  &__subheadline {
+    font-family: variables.$subheading-font;
+    color: variables.$sec2-subtitle-color;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 1rem;
+    font-weight: 400;
+  }
+
+  &__article {
+    @include mixins.flex-center(column, flex-start, center, 3rem);
+
+    padding: 0 2rem;
+
+    &--column {
+      max-width: 100%;
+    }
+  }
+
+  &__button {
+    @include mixins.button-style(variables.$accent-brown, #fff);
+
+    transition: transform 0.3s ease-in-out;
+    transform-origin: top left;
+
+    &:hover {
+      transform: rotate(15deg);
+    }
+  }
+}

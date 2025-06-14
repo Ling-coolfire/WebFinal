@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Web Page Project</title>
+    <link rel="stylesheet" href="dist/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="header__logo-title">Project</a>
+
+      <input
+        type="checkbox"
+        id="menu-toggle"
+        class="header__burger-menu-toggle"
+        hidden
+      />
+      <span class="burger-span"></span>
+
+      <div class="header__burger-menu">
+        <label for="menu-toggle" class="header__burger-menu-label">
+          <span class="burger-line"></span>
+        </label>
+      </div>
+      <nav class="header__nav" aria-label="Main navigation">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">PROJECTS</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">ABOUT US</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">STORIES</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero__container">
+        <img
+          src="assets/logo_dog.png"
+          alt="Dog logo"
+          class="hero__container--logo"
+        />
+        <h1 class="hero__container--title">Your Headline Here</h1>
+        <p class="hero__container--subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
+          eiusmod.
+        </p>
+      </div>
+    </section>
+
+    <main >
+       <article class="section">
+      <h2 class="section__headline">
+        This is the Section Headline,<br />
+        Continues to Two Lines
+      </h2>
+      <h3 class="section__subheadline">
+        Lorem ipsum dolor sit amet, consectetur<br />adipiscing elit sed do
+        eiusmod.
+      </h3>
+      <div class="section__article">
+        <div class="section__article--column">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum. Sed ut
+            perspiciatis unde omnis.
+          </p>
+        </div>
+        <div class="section__article--column">
+          <p>
+            Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+      <button class="section__button" type="button">READ MORE</button>
+    </article>
+    </main>
+
+  <footer>
+    <section class="learn_more">
+      <div class="learn_more__section">
+        <h2>Learn more<br />about our culture...</h2>
+        <button
+          class="learn_more__section--button"
+          type="button"
+          aria-label="Watch video"
+        >
+          &#9654;
+        </button>
+        <h3>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur.
+        </h3>
+      </div>
+    </section>
+    <div class="footer__section">
+      <div class="footer__section--1">
+        <div class="footer__section--1--logo">
+          <img src="assets/footer_logo.png" alt="" />
+          <h3>PROJECT</h3>
+        </div>
+
+        <div class="footer__section--1--contact">
+          <h4>
+            123 Street,<br />
+            Anytown, USA 12345
+          </h4>
+          <br />
+          <h4><a href="mailto:hello@website.com">hello@website.com</a></h4>
+        </div>
+      </div>
+
+      <div class="footer__section--2">
+        <h4>&copy; 2021 Project. All rights reserved</h4>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
